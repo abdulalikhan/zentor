@@ -20,7 +20,7 @@ class _AnxietyState extends State<Anxiety> {
           ),
         ),
         child: Container(
-          color: Color(0xffffb773).withOpacity(0.7),
+          color: Color(0xffbd4800).withOpacity(0.7),
           child: SafeArea(
             child: Container(
               child: Column(

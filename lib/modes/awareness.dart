@@ -20,7 +20,7 @@ class _AwarenessState extends State<Awareness> {
           ),
         ),
         child: Container(
-          color: Color(0xff97e37b).withOpacity(0.5),
+          color: Color(0xff2e6824).withOpacity(0.5),
           child: SafeArea(
             child: Container(
               child: Column(

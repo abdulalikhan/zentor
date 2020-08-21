@@ -1,5 +1,8 @@
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
+import 'package:firebase_admob/firebase_admob.dart';
+
+const String testDevice = 'YOUR_DEVICE_ID_GOES_HERE';
 
 class playerPlugin extends StatefulWidget {
   String currUrl;
@@ -16,6 +19,35 @@ class _playerPluginState extends State<playerPlugin> {
   Duration duration = new Duration();
   Duration position = new Duration();
   bool playing = false;
+
+  // Google AdMob
+  static const MobileAdTargetingInfo targetingInfo = MobileAdTargetingInfo(
+    testDevices: testDevice != null ? <String>[testDevice] : null,
+    nonPersonalizedAds: true,
+    //keywords: <String>['Games', 'Education', 'Online Learning', 'Free Courses'],
+  );
+
+  BannerAd _bannerAd;
+  InterstitialAd _interstitialAd;
+
+  BannerAd createBannerAd() {
+    return BannerAd(
+        adUnitId: 'ca-app-pub-8166746203092713/8256301996',
+        size: AdSize.banner,
+        targetingInfo: targetingInfo,
+        listener: (MobileAdEvent event) {
+          print("BannerAd $event");
+        });
+  }
+
+  InterstitialAd createInterstitialAd() {
+    return InterstitialAd(
+        adUnitId: 'ca-app-pub-8166746203092713/7450486786',
+        targetingInfo: targetingInfo,
+        listener: (MobileAdEvent event) {
+          print("IntersttialAd $event");
+        });
+  }
 
   @override
   void initState() {
@@ -44,10 +76,19 @@ class _playerPluginState extends State<playerPlugin> {
       widget.containerBg = 'coldrop';
     }
     getAudio(widget.currUrl);
+    FirebaseAdMob.instance
+        .initialize(appId: 'ca-app-pub-8166746203092713~9338283521');
+    _bannerAd = createBannerAd()
+      ..load()
+      ..show();
+    super.initState();
   }
 
   @override
   void dispose() {
+    //createInterstitialAd()
+    //  ..load()
+    //  ..show();
     audioPlayer.stop();
     super.dispose();
   }

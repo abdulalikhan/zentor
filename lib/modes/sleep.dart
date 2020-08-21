@@ -20,7 +20,7 @@ class _SleepState extends State<Sleep> {
           ),
         ),
         child: Container(
-          color: Color(0xffcf8cf9).withOpacity(0.5),
+          color: Color(0xff6b4da3).withOpacity(0.5),
           child: SafeArea(
             child: Container(
               child: Column(

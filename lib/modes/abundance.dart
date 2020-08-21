@@ -20,7 +20,7 @@ class _AbundanceState extends State<Abundance> {
           ),
         ),
         child: Container(
-          color: Color(0xff74e9f8).withOpacity(0.5),
+          color: Color(0xff000080).withOpacity(0.5),
           child: SafeArea(
             child: Container(
               child: Column(
