@@ -14,7 +14,7 @@ This app features a collection of quick guided meditation sessions for everyone.
 * audioplayers: [link](https://pub.dev/packages/audioplayers)
 
 ## Developer
-Comet Internet Speed Test was developed by Abdul Ali Khan
+Zentor was developed by Abdul Ali Khan
 - [x] [LinkedIn](https://pk.linkedin.com/in/abdul-ali-khan-620632144)
 - [ ] Facebook
 - [ ] Instagram
