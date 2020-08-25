@@ -2,6 +2,13 @@
 
 This app features a collection of quick guided meditation sessions for everyone. 
 
+## Screenshots
+<img src="https://raw.githubusercontent.com/abdulalikhan/zentor/master/1.png" height="600em" /> <img src="https://raw.githubusercontent.com/abdulalikhan/zentor/master/2.png" height="600em" /> 
+<br>
+<img src="https://raw.githubusercontent.com/abdulalikhan/zentor/master/3.png" height="600em" /> <img src="https://raw.githubusercontent.com/abdulalikhan/zentor/master/4.png" height="600em" />
+<br>
+<img src="https://raw.githubusercontent.com/abdulalikhan/zentor/master/5.png" height="600em" />
+
 ## Packages
 * cupertino_icons: [link](https://pub.dev/packages/cupertino_icons)
 * audioplayers: [link](https://pub.dev/packages/audioplayers)
